@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Demo</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0b1a2a;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-box {
+            width: 360px;
+            padding: 35px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0,0,0,.5);
+            text-align: center;
+        }
+
+        h1 {
+            color: #123c69;
+            font-size: 22px;
+        }
+
+        .demo-label {
+            color: #b00020;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin: 15px 0 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background: #123c69;
+            color: white;
+            border: 0;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h1>LOGIN DEMO</h1>
+
+    <div class="demo-label">
+        DEMONSTRATION — DO NOT ENTER REAL CREDENTIALS
+    </div>
+
+    <form onsubmit="demoLogin(event)">
+
+        <label for="username">INPUT 1 (USERNAME)</label>
+        <input
+            type="text"
+            id="username"
+            autocomplete="off"
+            placeholder="Demo username"
+            required
+        >
+
+        <label for="password">INPUT 2 (PASSWORD)</label>
+        <input
+            type="password"
+            id="password"
+            autocomplete="off"
+            placeholder="Demo password"
+            required
+        >
+
+        <button type="submit">LOGIN</button>
+
+    </form>
+
+</div>
+
+<script>
+function demoLogin(event) {
+    event.preventDefault();
+
+    alert("Demo login only. No username or password was submitted.");
+
+    return false;
+}
+</script>
+
+</body>
+</html>
